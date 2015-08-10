@@ -1,7 +1,7 @@
 function create_database() {
   _createdb=$1
   echo "_createdb: ${_createdb}, 1: ${1}"
-  ${db_binary} ${server_flag} ${port_flag} ${user_flag} ${password_flag} -b -Q "create database \"${_createdb}\";"
+  ${db_binary} ${server_flag} ${port_flag} ${user_flag} ${password_flag} -b -Q "create database [${_createdb}];"
   rc=$?
   unset _createdb
   if [ ${rc} -eq 0 ]
